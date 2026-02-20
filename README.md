@@ -5,14 +5,14 @@ Desarrollar una herramienta web interactiva para el cifrado y descifrado de mens
 
 ---
 
-## 📜 Introducción Histórica y Seguridad
+##  Introducción Histórica y Seguridad
 El criptoanálisis moderno nace con **Al-Kindi**, quien introdujo el **análisis de frecuencias**. Esta técnica demuestra que los métodos César y Atbash ya no son viables para la protección de datos actual, debido a que:
 1. **Vulnerabilidad Estadística:** La repetición de patrones en el lenguaje natural permite romper el código sin conocer la clave.
 2. **Espacio de Claves Reducido:** El cifrado César solo posee un número limitado de rotaciones (según el tamaño del alfabeto), lo que facilita ataques de fuerza bruta.
 
 ---
 
-## 🛠️ Documentación del Desarrollo (Seguridad y Lógica)
+##  Documentación del Desarrollo (Seguridad y Lógica)
 Para garantizar la integridad del sistema, se implementaron las siguientes lógicas:
 
 ### 1. Algoritmo César (Sustitución Progresiva)
@@ -27,7 +27,7 @@ El sistema identifica el índice del carácter y lo sustituye por su opuesto exa
 
 ---
 
-## 🚀 Instrucciones de Uso
+##  Instrucciones de Uso
 1. **Alfabeto:** Ingrese el conjunto de caracteres deseado (Soporta ASCII completo).
 2. **Método:** Seleccione entre César o Atbash.
 3. **Acción:** Use los botones "Cifrar" o "Descifrar" para obtener el resultado instantáneo.
