@@ -1,0 +1,133 @@
+:root {
+    --primary: #6366f1;
+    --bg-body: #fff0f6; /* Rosa ligero pedido */
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --border: #e2e8f0;
+}
+
+[data-theme="dark"] {
+    --bg-body: #111827;
+    --card-bg: #1f2937;
+    --text-main: #f9fafb;
+    --border: #374151;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    width: 90%;
+    max-width: 900px;
+    padding: 40px 0;
+}
+
+.app-header { text-align: center; margin-bottom: 30px; }
+.highlight { color: var(--primary); }
+
+/* Panel de Configuración Horizontal */
+.config-panel {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.config-item { flex: 1; }
+.alphabet-box { flex: 2; }
+.config-item label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 8px; opacity: 0.7; }
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-main);
+    box-sizing: border-box;
+}
+
+/* Área de Cifrado */
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.area-label { display: block; margin: 15px 0 8px; font-weight: 600; }
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-encrypt { background: var(--primary); color: white; }
+.btn-decrypt { background: #f1f5f9; color: #475569; border: 1px solid var(--border); }
+[data-theme="dark"] .btn-decrypt { background: #374151; color: white; }
+
+.result-box { position: relative; }
+.copy-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+/* Contenedor relativo para que el botón se pegue al textarea */
+.input-box {
+    position: relative;
+}
+
+/* Estilo del botón Limpiar */
+.clear-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ef4444; /* Rojo suave para indicar "borrar" */
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.clear-btn:hover {
+    background: #dc2626;
+}
+
+/* Asegúrate de que el botón de copiar y el de limpiar se vean iguales en tamaño */
+.copy-link, .clear-btn {
+    z-index: 10;
+}
